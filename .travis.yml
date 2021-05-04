@@ -1,0 +1,25 @@
+# ----------------------------------------------------------------------------
+#
+# Package             : minishift-centos-iso
+# Source Repo         : https://github.com/minishift/minishift-centos-iso/
+# Travis Job Link     : https://travis-ci.com/github/asellappen/minishift-centos-iso/
+# Created travis.yml  : Yes
+# Maintainer          : Arumugam N S <asellappen@yahoo.com> / Priya Seth<sethp@us.ibm.com>
+#
+# Script License      : Apache License, Version 2 or later
+#
+# ----------------------------------------------------------------------------
+language: python
+
+disct: bionic
+arch:
+    - amd64
+    - ppc64le
+    
+python:
+    - 3.7  
+     
+script:	
+    - make init
+    - make 
+    - make test
